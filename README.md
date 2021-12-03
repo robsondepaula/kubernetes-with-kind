@@ -1,5 +1,5 @@
 # Kubernetes
-Some experiments using kind to bootstrap local kubernetes cluster.
+Some experiments using kind to bootstrap a local kubernetes cluster.
 
 ## k3d
 A cluster created with:
@@ -10,7 +10,7 @@ Can be inspected with:
 ```
 kubectl -n kube-system get all
 ```
-To verify its footprint:
+To verify the components deployed to the cluster:
 ```
 NAME                                          READY   STATUS    RESTARTS   AGE
 pod/local-path-provisioner-5ff76fc89d-pjqpr   1/1     Running   0          65m
@@ -35,13 +35,13 @@ replicaset.apps/coredns-7448499f4d                  1         1         1       
 ## kind
 The cluster can be created with:
 ```
-kind create cluster --config kind-config.yamlk
+kind create cluster --config kind-config.yaml
 ```
 Inspected with:
 ```
 kubectl -n kube-system get all
 ```
-And we can check a more complex infrastructure:
+And we can check the cluster components:
 ```
 NAME                                             READY   STATUS    RESTARTS   AGE
 pod/coredns-558bd4d5db-gvwvz                     1/1     Running   0          74m
@@ -70,3 +70,4 @@ deployment.apps/coredns   2/2     2            2           74m
 NAME                                 DESIRED   CURRENT   READY   AGE
 replicaset.apps/coredns-558bd4d5db   2         2         2       74m
 ```
+To check the roles and responsabilities of each component visit https://kubernetes.io/docs/concepts/overview/components/#control-plane-components.
