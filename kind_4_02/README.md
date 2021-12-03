@@ -1,3 +1,6 @@
+# Revisiting 
+I revisted the course problem [4.02](https://devopswithkubernetes.com/part-4/1-update-strategies-and-prometheus), this time using kind instead of k3d.
+
 # Local Kubernetes using kind
 Create a volume:
 ```
